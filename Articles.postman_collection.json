@@ -1,0 +1,362 @@
+{
+	"info": {
+		"_postman_id": "d15fb3e3-8a7c-453e-b6be-1f2da3fca3a8",
+		"name": "Articles",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14781507",
+		"_collection_link": "https://www.postman.com/red-zodiac-99638/workspace/golang-post-article/collection/14781507-d15fb3e3-8a7c-453e-b6be-1f2da3fca3a8?action=share&creator=14781507&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "Add Article",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"EFCKKytqjAHQxd4SZllx harus minimal 20 character\",\n    \"content\":\"f3MOvuj8PW6WOmTe2uSLQgyFvLp9IdxC0rdP71KuYroQo5ObcaDLeyJEOAUTgJ3zUxhB862BqPG4srtYjc6rEaWk5yhSe0nm7crifSgVkaWZvQLhz1cWkXgddI4y31M30C0tmLxwaa8jZnDt9TaOUxFzifPqIEomA6Lo8xn7y80QGMOssj8PF0c8EFpDQdmXrLOCk6ey harus minimal 200 character\",\n    \"category\": \"makanan\",\n    \"status\": \"trash\" // publish / draft / trash\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/article",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"article"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "201 Created",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"EFCKKytqjAHQxd4SZllx harus minimal 20 character\",\n    \"content\":\"f3MOvuj8PW6WOmTe2uSLQgyFvLp9IdxC0rdP71KuYroQo5ObcaDLeyJEOAUTgJ3zUxhB862BqPG4srtYjc6rEaWk5yhSe0nm7crifSgVkaWZvQLhz1cWkXgddI4y31M30C0tmLxwaa8jZnDt9TaOUxFzifPqIEomA6Lo8xn7y80QGMOssj8PF0c8EFpDQdmXrLOCk6ey harus minimal 200 character\",\n    \"category\": \"makanan\",\n    \"status\": \"trash\" // publish / draft / trash\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/article",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"article"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Xss-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 15 Jul 2023 05:32:48 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "420"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"id\": 16,\n        \"title\": \"EFCKKytqjAHQxd4SZllx harus minimal 20 character\",\n        \"content\": \"f3MOvuj8PW6WOmTe2uSLQgyFvLp9IdxC0rdP71KuYroQo5ObcaDLeyJEOAUTgJ3zUxhB862BqPG4srtYjc6rEaWk5yhSe0nm7crifSgVkaWZvQLhz1cWkXgddI4y31M30C0tmLxwaa8jZnDt9TaOUxFzifPqIEomA6Lo8xn7y80QGMOssj8PF0c8EFpDQdmXrLOCk6ey harus minimal 200 character\",\n        \"category\": \"makanan\",\n        \"status\": \"trash\"\n    },\n    \"code\": 201,\n    \"message\": \"Success to insert article\",\n    \"success\": true\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Article",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/article/8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"article",
+						"8"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "200 OK",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/article/8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"article",
+								"8"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Xss-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 15 Jul 2023 05:33:18 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "486"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"id\": 8,\n        \"title\": \"EFCKKytqjAHQxd4SZllx harus minimal 20 character\",\n        \"content\": \"f3MOvuj8PW6WOmTe2uSLQgyFvLp9IdxC0rdP71KuYroQo5ObcaDLeyJEOAUTgJ3zUxhB862BqPG4srtYjc6rEaWk5yhSe0nm7crifSgVkaWZvQLhz1cWkXgddI4y31M30C0tmLxwaa8jZnDt9TaOUxFzifPqIEomA6Lo8xn7y80QGMOssj8PF0c8EFpDQdmXrLOCk6ey harus minimal 200 character\",\n        \"category\": \"makanan\",\n        \"status\": \"trash\",\n        \"created_at\": \"2023-07-14 17:23:14\",\n        \"updated_at\": \"2023-07-14 17:23:14\"\n    },\n    \"code\": 200,\n    \"message\": \"Success to get article\",\n    \"success\": true\n}"
+				}
+			]
+		},
+		{
+			"name": "Get List Articles",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/article?page=1&size=2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"article"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "size",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "200 OK",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/article?page=1&size=2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"article"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "size",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Xss-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 15 Jul 2023 05:26:10 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "987"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": [\n        {\n            \"id\": 10,\n            \"title\": \"EFCKKytqjAHQxd4SZllx harus minimal 20 character\",\n            \"content\": \"f3MOvuj8PW6WOmTe2uSLQgyFvLp9IdxC0rdP71KuYroQo5ObcaDLeyJEOAUTgJ3zUxhB862BqPG4srtYjc6rEaWk5yhSe0nm7crifSgVkaWZvQLhz1cWkXgddI4y31M30C0tmLxwaa8jZnDt9TaOUxFzifPqIEomA6Lo8xn7y80QGMOssj8PF0c8EFpDQdmXrLOCk6ey harus minimal 200 character\",\n            \"category\": \"makanan\",\n            \"status\": \"trash\",\n            \"created_at\": \"2023-07-15 04:52:53\",\n            \"updated_at\": \"2023-07-15 04:52:53\"\n        },\n        {\n            \"id\": 11,\n            \"title\": \"EFCKKytqjAHQxd4SZllx harus minimal 20 character\",\n            \"content\": \"f3MOvuj8PW6WOmTe2uSLQgyFvLp9IdxC0rdP71KuYroQo5ObcaDLeyJEOAUTgJ3zUxhB862BqPG4srtYjc6rEaWk5yhSe0nm7crifSgVkaWZvQLhz1cWkXgddI4y31M30C0tmLxwaa8jZnDt9TaOUxFzifPqIEomA6Lo8xn7y80QGMOssj8PF0c8EFpDQdmXrLOCk6ey harus minimal 200 character\",\n            \"category\": \"makanan\",\n            \"status\": \"trash\",\n            \"created_at\": \"2023-07-15 05:02:31\",\n            \"updated_at\": \"2023-07-15 05:02:31\"\n        }\n    ],\n    \"meta\": {\n        \"total_count\": 6,\n        \"total_pages\": 3,\n        \"page\": 1,\n        \"size\": 2,\n        \"has_more\": true\n    },\n    \"code\": 200,\n    \"message\": \"Success to get list articles\",\n    \"success\": true\n}"
+				}
+			]
+		},
+		{
+			"name": "Update Article",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"EFCKKytqjAHQxd4SZllx harus minimal 20\",\n    \"content\":\"f3MOvuj8PW6WOmTe2uSLQgyFvLp9IdxC0rdP71KuYroQo5ObcaDLeyJEOAUTgJ3zUxhB862BqPG4srtYjc6rEaWk5yhSe0nm7crifSgVkaWZvQLhz1cWkXgddI4y31M30C0tmLxwaa8jZnDt9TaOUxFzifPqIEomA6Lo8xn7y80QGMOssj8PF0c8EFpDQdmXrLOCk6ey harus minimal 200 character\",\n    \"category\": \"makanan\",\n    \"status\": \"trash\" // publish / draft / trash\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/article/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"article",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Article",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/article/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"article",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
