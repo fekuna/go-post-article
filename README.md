@@ -15,4 +15,4 @@ Note:
     make run
 
 ### POSTMAN COLLECTION
-    i have inserted postman collection in this collection
+    i have inserted postman collection in this project
