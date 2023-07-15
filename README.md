@@ -14,6 +14,5 @@ Note:
     make migrate_up // migrate tables to your mysql
     make run
 
-
-
-
+### POSTMAN COLLECTION
+    i have inserted postman collection in this collection
