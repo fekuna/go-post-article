@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  mysql:
+    image: mysql
+    container_name: db-post-article
+    restart: always
+    ports:
+      - "3306:3306"
+    command: --init-file /data/application/init.sql
+    environment:
+      MYSQL_ROOT_USER: root
+      MYSQL_ROOT_PASSWORD: secret
+    volumes:
+      - ./.local/db/mysql:/var/lib/mysql
+      - ./init.sql:/data/application/init.sql
+    networks:
+      - web_api
+
+networks:
+  web_api:
+    driver: bridge
