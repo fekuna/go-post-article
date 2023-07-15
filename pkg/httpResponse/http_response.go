@@ -8,7 +8,7 @@ import (
 
 type ApiResponse struct {
 	Data    interface{} `json:"data"`
-	Meta    interface{} `json:"meta,ompitempty"`
+	Meta    interface{} `json:"meta,omitempty"`
 	Code    int         `json:"code"`
 	Message string      `json:"message,omitempty"`
 	Success bool        `json:"success"`
